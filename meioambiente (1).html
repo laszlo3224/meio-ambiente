@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preservação do Meio Ambiente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Chewy', cursive;
+            text-align: center;
+            background-color: #e0f7fa;
+            padding: 20px;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: 'Chewy', cursive;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        img {
+            width: 70%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slide1" class="slide active">
+        <h2>🌱 A Importância da Preservação do Meio Ambiente 🌍</h2>
+        <img src="https://www.florence.edu.br/wp-content/uploads/2022/08/people-holding-the-earth-in-their-hands-600x400.jpg" alt="Planeta na mão">
+        <p>Nosso planeta precisa de cuidados! Pequenas ações podem fazer uma grande diferença, todos trabalhando juntos iremos conseguir.</p>
+        <button onclick="nextSlide(2)">Próximo</button>
+    </div>
+    <div id="slide2" class="slide">
+        <h2>♻️ Reciclagem</h2>
+        <img src="https://meiosustentavel.com.br/wp-content/uploads/2019/08/Lixeiras-Reciclaveis-01-1024x568.png" alt="Lixeiras recicláveis">
+        <p>Separar o lixo corretamente ajuda a reduzir a poluição e reaproveitar materiais.</p>
+        <button onclick="nextSlide(1)">Voltar</button>
+        <button onclick="nextSlide(3)">Próximo</button>
+    </div>
+    <div id="slide3" class="slide">
+        <h2>🚰 Economize Água</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpNp2SlKGUdrb1a7y7BpkkaoTyYd03kFoLuw&s" alt="Torneira com água pingando">
+        <p>Evite desperdícios! Pequenas ações, como fechar a torneira ao escovar os dentes, fazem a diferença.</p>
+        <button onclick="nextSlide(2)">Voltar</button>
+        <button onclick="nextSlide(4)">Próximo</button>
+    </div>
+    <div id="slide4" class="slide">
+        <h2>🌳 Plante Árvores</h2>
+        <img src="https://arvoregenerosa.org.br/wp-content/uploads/2021/01/capa_blog_AG_2801.png" alt="Árvore sendo plantada">
+        <p>As árvores ajudam a purificar o ar, além de fornecer sombra e abrigo para os animais.</p>
+        <button onclick="nextSlide(3)">Voltar</button>
+        <button onclick="nextSlide(5)">Próximo</button>
+    </div>
+    <div id="slide5" class="slide">
+        <h2>🌎 Juntos Podemos Fazer a Diferença!</h2>
+        <img src="https://cndl.org.br/varejosa/wp-content/uploads/2021/06/Destaque-Varejo-15-06-21.png" alt="Lâmpada com planeta dentro">
+        <p>Adote hábitos sustentáveis e contribua para um futuro melhor. Compartilhe essa ideia! 💚</p>
+        <button onclick="nextSlide(1)">Voltar ao Início</button>
+    </div>
+
+    <script>
+        function nextSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById('slide' + slideNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>
